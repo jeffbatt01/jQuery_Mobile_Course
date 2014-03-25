@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22.435px" height="22.084px" viewBox="0 0 22.435 22.084" enable-background="new 0 0 22.435 22.084" xml:space="preserve">
+<symbol  id="Alert_x2F_1pulse" viewBox="-1 -30.5 32 31.5">
+	
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#FF3300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+		M8.35-1.45l1.725-4.375 M2.25-6.85l3.9-2.6 M27.75-6.85l-3.9-2.6 M21.65-1.45l-1.725-4.375 M15,0v-4.7 M4.7-14.6H0 M25.301-14.6H30
+		 M15-29.5v4.701 M21.65-28.049l-1.725,4.375 M27.75-22.65l-3.9,2.601 M2.25-22.65l3.9,2.601 M8.35-28.049l1.725,4.375"/>
+</symbol>
+<symbol  id="Alert_x2F_1pulser_FLM_x5F_FRAME_x5F_0" viewBox="-4.107 -4.028 8.213 8.085">
+	<g id="Layer_7_2_">
+		
+			<use xlink:href="#Alert_x2F_1pulse"  width="32" height="31.5" id="XMLID_3_" x="-1" y="-30.5" transform="matrix(0.2567 0 0 0.2567 -3.8501 3.7998)" overflow="visible"/>
+	</g>
+</symbol>
+<use xlink:href="#Alert_x2F_1pulser_FLM_x5F_FRAME_x5F_0"  width="8.213" height="8.085" id="XMLID_1_" x="-4.107" y="-4.028" transform="matrix(2.7316 0 0 -2.7316 11.2183 11.0806)" overflow="visible"/>
+</svg>
