@@ -25,7 +25,7 @@
 			$("#mainMenu").panel("open");
 		});
 		//This clicks open the menu on the first poage
-		$("#menuButton").on("click", function(event, ui) {
+		$("#page1Menu").on("click", function(event, ui) {
 			$("#mainMenu").panel("open");
 		});
 		
@@ -60,10 +60,9 @@
 		});
 		
 		/////////Creating a dynmaic menu on each page/////////
-		
-		$('.sideMenu').append('<li data-role="list-divider">Topic 1</li><li><a href="#page1" data-transition="fade">Welcome Page</a></li><li><a href="#page2" data-transition="fade">Tab Interaction</a></li><li><a href="#page3">Board Game</a></li><li><a href="#page4" data-transition="fade">Resizable Page</a></li>').listview('refresh');
-		
-	 });
+    $('.sideMenu').append('<li data-role="list-divider">Topic 1</li><li><a href="#page1" data-transition="fade">Welcome Page</a></li><li><a href="#page2" data-transition="fade">Tab Interaction</a></li><li><a href="#page3">Board Game</a></li><li><a href="#page4" data-transition="fade">Resizable Page</a></li>').listview('refresh');
+    
+   });
 	
 	/*$(document).on('pageshow', '#page1',function(){
 		
@@ -78,8 +77,8 @@
 
 <div id="page1" data-role="page">
 	<div data-role="header" data-theme="a" class="ui-shadow"> 
-    	<div id="menuButton"><img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/></div>
-	 	<h1><img src="images/Logo.png"/></h1>
+    	<div class="menuButton" id="page1Menu"></div>
+	 	<h1 class="logo"></h1>
 	</div>
 	<div data-role="content" id="contentSection">
     	<img class="bigPic" class="ui-shadow" src="images/anegla_1.png" style="float:right" alt=""/> 
@@ -110,7 +109,6 @@
         
       </ul>
       
-      <a href="" data-role="button" data-theme="b" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px">Close Menu</a>
     </div>
     <!-- End Menu Panel -->
     
@@ -121,8 +119,8 @@
 <!-- Page 2 -->
 <div data-role="page" id="page2">
 	<div data-role="header" data-theme="a" class="ui-shadow">
-    	<div id="ppage2Menu"><img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/></div>
-		<h1><img src="images/Logo.png"/></h1>
+    	<div class="menuButton" id="ppage2Menu"></div>
+		<h1 class="logo"></h1>
 	</div>
     
 	<div data-role="content">	
@@ -149,7 +147,6 @@
         
       </ul>
       
-      <a href="" data-role="button" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px" data-theme="b">Close Menu</a>
     </div>
     <!-- End Menu Panel -->
     
@@ -160,8 +157,8 @@
 <!-- Page 3 -->
 <div data-role="page" id="page3">
 	<div data-role="header" data-theme="a" class="ui-shadow">
-    	<div id="ppage3Menu"><img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/></div>
-		<h1><img src="images/Logo.png"/></h1>
+    	<div class="menuButton" id="ppage3Menu"></div>
+		<h1 class="logo"></h1>
 	</div>
     
 	<div data-role="content">	
@@ -188,7 +185,6 @@
         
       </ul>
       
-      <a href="" data-role="button" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px" data-theme="b">Close Menu</a>
     </div>
     <!-- End Menu Panel -->
     
@@ -199,8 +195,8 @@
 <!-- Page 4 -->
 <div data-role="page" id="page4">
 	<div data-role="header" data-theme="a" class="ui-shadow">
-    	<div id="page4Menu"><img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/></div>
-		<h1><img src="images/Logo.png"/></h1>
+    	<div class="menuButton" id="page4Menu"></div>
+		<h1 class="logo"></h1>
 	</div>
     
 	<div data-role="content">
@@ -228,7 +224,6 @@
         
       </ul>
       
-      <a href="" data-role="button" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px" data-theme="b">Close Menu</a>
     </div>
     <!-- End Menu Panel -->
     
@@ -236,11 +231,24 @@
 
 <!-- End Page 4 -->
 
+<!--This script is to dynamically build some of the repeating content in each page-->
 <script>
- 
-	document.getElementById("menu1Title").innerHTML = JSONObject.menu1Title;
+  
+  //Sample way of updating the text in the menu
+	document.getElementById("menu1Title").innerHTML = JSONObject.page1Title;
+
+  //Inserting the logo in the logo section
+  $('.logo').html('<img src="images/Logo.png"/>');
+
+  //Inserting the menu button on the top of each page
+  $('.menuButton').html('<img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/>');
+
+  //Inserting the close button after the side menu
+  $('<a href="" data-role="button" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px" data-theme="b">Close Menu</a>').insertAfter('.sideMenu');
 
 </script>
+
+<!--This ends the script to dynamically build some of the repeating content in each page-->
 
 </body>
 </html>
