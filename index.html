@@ -15,21 +15,21 @@
 <!-- Load in JSON -->
 <script src="menuContent.js"></script>
 
-<script>
+<script type="text/javascript">
 
 	$(document).ready(function() {
 		
-		////////// Page 1 Events //////////
+	////////// Page 1 Events //////////
 		//This swipes open the menu on the first page
 		$("#page1").on("swiperight", function(event, ui) {
 			$("#mainMenu").panel("open");
 		});
 		//This clicks open the menu on the first poage
-		$("#menuButton").on("click", function(event, ui) {
+		$("#page1Menu").on("click", function(event, ui) {
 			$("#mainMenu").panel("open");
 		});
 		
-		////////// Page 2 Events //////////
+	////////// Page 2 Events //////////
 		//This swipes open the menu on the second page
 		$("#page2").on("swiperight", function(event, ui) {
 			$("#menu2").panel("open");
@@ -39,7 +39,7 @@
 			$("#menu2").panel("open");
 		});
 		
-		////////// Page 3 Events //////////
+	////////// Page 3 Events //////////
 		//This swipes open the menu on the second page
 		$("#page3").on("swiperight", function(event, ui) {
 			$("#menu3").panel("open");
@@ -49,7 +49,7 @@
 			$("#menu3").panel("open");
 		});
 		
-		////////// Page 4 Events //////////
+  ////////// Page 4 Events //////////
 		//This swipes open the menu on the second page
 		$("#page4").on("swiperight", function(event, ui) {
 			$("#menu4").panel("open");
@@ -59,11 +59,10 @@
 			$("#menu4").panel("open");
 		});
 		
-		/////////Creating a dynmaic menu on each page/////////
-		
-		$('.sideMenu').append('<li data-role="list-divider">Topic 1</li><li><a href="#page1" data-transition="fade">Welcome Page</a></li><li><a href="#page2" data-transition="fade">Tab Interaction</a></li><li><a href="#page3">Board Game</a></li><li><a href="#page4" data-transition="fade">Resizable Page</a></li>').listview('refresh');
-		
-	 });
+	/////////Creating a dynmaic menu on each page/////////
+    $('.sideMenu').append('<li data-role="list-divider">Topic 1</li><li><a href="#page1" data-transition="fade">Welcome Page</a></li><li><a href="#page2" data-transition="fade">Tab Interaction</a></li><li><a href="#page3">Board Game</a></li><li><a href="#page4" data-transition="fade">Resizable Page</a></li>').listview('refresh');
+    
+   });
 	
 	/*$(document).on('pageshow', '#page1',function(){
 		
@@ -77,81 +76,70 @@
 <!-- Page 1 -->
 
 <div id="page1" data-role="page">
-	<div data-role="header" data-theme="a" class="ui-shadow"> 
-    	<div id="menuButton"><img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/></div>
-	 	<h1><img src="images/Logo.png"/></h1>
-	</div>
+  <div data-role="header" data-theme="a" class="ui-shadow"> 
+    <div class="menuButton" id="page1Menu"></div>
+    <h1 class="logo"></h1>
+  </div>
 	<div data-role="content" id="contentSection">
-    	<img class="bigPic" class="ui-shadow" src="images/anegla_1.png" style="float:right" alt=""/> 
-       <h3 id="menu1Title">Sample Course Title</h3>
-       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-       <a href="#page2" data-role="button" data-theme="b" data-corners="false" data-inline="true">Begin Course</a>
-       
-   </div>
+      <h3 id="page1Title">Sample Course Title</h3>
+      <object id="PageContent1" type="text/html" width="100%" height="570" data-dw-widget="Edge" data="">
+    </object>
+  </div>
    
-   <!--Footer-->
-   <div data-role="footer" data-position="fixed" data-theme="b">
-		<div data-role="navbar">
-        	<ul>
-            	<li><a href="#page1" data-icon="arrow-l">Back</a></li>
-              <li><a href="#page1" data-icon="home">Home Page</a></li>
-              <li><a href="#page2" data-icon="arrow-r">Next</a></li>
-          </ul>
-		</div><!-- /navbar -->
-   </div>
-   <!--End Footer-->
-    
-    <!-- Start Menu Panel -->
-    <div data-role="panel" id="mainMenu" data-theme="c" data-display="reveal" data-position="left">
-    
-      <ul data-role="listview" data-theme="a" class="sideMenu">
-        
+<!--Footer-->
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page1" data-icon="arrow-l">Back</a></li>
+        <li><a href="#page1" data-icon="home">Home Page</a></li>
+        <li><a href="#page2" data-icon="arrow-r">Next</a></li>
       </ul>
-      
-      <a href="" data-role="button" data-theme="b" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px">Close Menu</a>
-    </div>
-    <!-- End Menu Panel -->
+    </div><!-- /navbar -->
+  </div>
+<!--End Footer-->
+    
+<!-- Start Menu Panel -->
+  <div data-role="panel" id="mainMenu" data-theme="c" data-display="reveal" data-position="left">
+    <ul data-role="listview" data-theme="a" class="sideMenu">
+
+    </ul>   
+  </div>
+<!-- End Menu Panel -->
     
 </div>
-
 <!-- End Page 1 -->
 
 <!-- Page 2 -->
 <div data-role="page" id="page2">
-	<div data-role="header" data-theme="a" class="ui-shadow">
-    	<div id="ppage2Menu"><img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/></div>
-		<h1><img src="images/Logo.png"/></h1>
-	</div>
+  <div data-role="header" data-theme="a" class="ui-shadow">
+    <div class="menuButton" id="ppage2Menu"></div>
+    <h1 class="logo"></h1>
+  </div>
     
 	<div data-role="content">	
-	  <object id="EdgeID" type="text/html" width="100%" height="570" data-dw-widget="Edge" data="index/Assets/index.html">
-      </object>
-    </div>
+    <object id="PageContent2" type="text/html" width="100%" height="570" data-dw-widget="Edge" data="">
+    </object>
+  </div>
     
-   <!--Footer-->
-   <div data-role="footer" data-position="fixed" data-theme="b">
-		<div data-role="navbar">
-        	<ul>
-            	<li><a href="#page1" data-icon="arrow-l">Back</a></li>
-              <li><a href="#page1" data-icon="home">Home Page</a></li>
-              <li><a href="#page3" data-icon="arrow-r">Next</a></li>
-          </ul>
-		</div><!-- /navbar -->
-   </div>
-   <!--End Footer-->
-    
-    <!-- Start Menu Panel -->
-    <div data-role="panel" id="menu2" data-theme="c" data-display="reveal" data-position="left">
-    
-      <ul data-role="listview" data-theme="a" class="sideMenu">
-        
+<!--Footer-->
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page1" data-icon="arrow-l">Back</a></li>
+        <li><a href="#page1" data-icon="home">Home Page</a></li>
+        <li><a href="#page3" data-icon="arrow-r">Next</a></li>
       </ul>
-      
-      <a href="" data-role="button" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px" data-theme="b">Close Menu</a>
-    </div>
-    <!-- End Menu Panel -->
+    </div><!-- /navbar -->
+  </div>
+<!--End Footer-->
+    
+<!-- Start Menu Panel -->
+  <div data-role="panel" id="menu2" data-theme="c" data-display="reveal" data-position="left">
+    <ul data-role="listview" data-theme="a" class="sideMenu">
+    
+    </ul>   
+  </div>
+<!-- End Menu Panel -->
     
 </div>
 
@@ -159,38 +147,35 @@
 
 <!-- Page 3 -->
 <div data-role="page" id="page3">
-	<div data-role="header" data-theme="a" class="ui-shadow">
-    	<div id="ppage3Menu"><img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/></div>
-		<h1><img src="images/Logo.png"/></h1>
-	</div>
+  <div data-role="header" data-theme="a" class="ui-shadow">
+    <div class="menuButton" id="ppage3Menu"></div>
+    <h1 class="logo"></h1>
+  </div>
     
 	<div data-role="content">	
-	  <object id="EdgeID2" type="text/html" width="740" height="560" data-dw-widget="Edge" data="boardgame/Assets/index.html">
-      </object>
-    </div>
+    <object id="PageContent3" type="text/html" width="740" height="560" data-dw-widget="Edge" data="">
+    </object>
+  </div>
     
-   <!--Footer-->
-   <div data-role="footer" data-position="fixed" data-theme="b">
-		<div data-role="navbar">
-        	<ul>
-            	<li><a href="#page2" data-icon="arrow-l">Back</a></li>
-              <li><a href="#page1" data-icon="home">Home Page</a></li>
-              <li><a href="#page3" data-icon="arrow-r">Next</a></li>
-          </ul>
-		</div><!-- /navbar -->
-   </div>
-   <!--End Footer-->
-    
-    <!-- Start Menu Panel -->
-    <div data-role="panel" id="menu3" data-theme="c" data-display="reveal" data-position="left">
-    
-      <ul data-role="listview" data-theme="a" class="sideMenu">
-        
+<!--Footer-->
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page2" data-icon="arrow-l">Back</a></li>
+        <li><a href="#page1" data-icon="home">Home Page</a></li>
+        <li><a href="#page3" data-icon="arrow-r">Next</a></li>
       </ul>
-      
-      <a href="" data-role="button" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px" data-theme="b">Close Menu</a>
-    </div>
-    <!-- End Menu Panel -->
+    </div><!-- /navbar -->
+  </div>
+<!--End Footer-->
+    
+<!-- Start Menu Panel -->
+  <div data-role="panel" id="menu3" data-theme="c" data-display="reveal" data-position="left">  
+    <ul data-role="listview" data-theme="a" class="sideMenu">
+        
+    </ul>  
+  </div>
+<!-- End Menu Panel -->
     
 </div>
 
@@ -199,48 +184,70 @@
 <!-- Page 4 -->
 <div data-role="page" id="page4">
 	<div data-role="header" data-theme="a" class="ui-shadow">
-    	<div id="page4Menu"><img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/></div>
-		<h1><img src="images/Logo.png"/></h1>
+    <div class="menuButton" id="page4Menu"></div>
+    <h1 class="logo"></h1>
 	</div>
     
 	<div data-role="content">
-    	<div class="embed-container">
-        	<object id="EdgeID3" type="text/html" data-dw-widget="Edge" data="index/Assets/index.html"></object>
-        </div>
+    <div class="embed-container">
+      <object id="PageContent4" type="text/html" data-dw-widget="Edge" data=""></object>
     </div>
+  </div>
     
-   <!--Footer-->
-   <div data-role="footer" data-position="fixed" data-theme="b">
-		<div data-role="navbar">
-        	<ul>
-            	<li><a href="#page2" data-icon="arrow-l">Back</a></li>
-              <li><a href="#page1" data-icon="home">Home Page</a></li>
-              <li><a href="#page3" data-icon="arrow-r">Next</a></li>
-          </ul>
-		</div><!-- /navbar -->
-   </div>
-   <!--End Footer-->
-    
-    <!-- Start Menu Panel -->
-    <div data-role="panel" id="menu4" data-theme="c" data-display="reveal" data-position="left">
-    
-      <ul data-role="listview" data-theme="a" class="sideMenu">
-        
+<!--Footer-->
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page2" data-icon="arrow-l">Back</a></li>
+        <li><a href="#page1" data-icon="home">Home Page</a></li>
+        <li><a href="#page3" data-icon="arrow-r">Next</a></li>
       </ul>
-      
-      <a href="" data-role="button" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px" data-theme="b">Close Menu</a>
-    </div>
-    <!-- End Menu Panel -->
+    </div><!-- /navbar -->
+  </div>
+<!--End Footer-->
+    
+<!-- Start Menu Panel -->
+  <div data-role="panel" id="menu4" data-theme="c" data-display="reveal" data-position="left">  
+    <ul data-role="listview" data-theme="a" class="sideMenu">
+        
+    </ul>
+  </div>
+<!-- End Menu Panel -->
     
 </div>
 
 <!-- End Page 4 -->
 
+<!--This script is to dynamically build some of the repeating content in each page-->
 <script>
- 
-	document.getElementById("menu1Title").innerHTML = JSONObject.menu1Title;
+  
+  //Sample way of updating the text in the menu
+	//document.getElementById("page1Title").innerHTML = JSONObject.page1Title;
+
+  //Inserting the logo in the logo section
+  $('.logo').html('<img src="images/Logo.png"/>');
+
+  //Inserting the menu button on the top of each page
+  $('.menuButton').html('<img src="images/Menu.png" width="40" height="36" class="ui-btn-left" style="margin-top:11px"/>');
+
+    //Inserting the close button after the side menu
+  $('<a href="" data-role="button" data-icon="delete" data-iconpos="left" data-rel="close" data-corners="false" data-transition="slide" style="margin-top:30px" data-theme="b">Close Menu</a>').insertAfter('.sideMenu');
+
+  ///////Page 1 Content///////
+  $("#PageContent1").attr("data",JSONObject.page1Content);
+
+  ///////Page 2 Content///////
+  $("#PageContent2").attr("data",JSONObject.page2Content);
+
+  ///////Page 3 Content///////
+  $("#PageContent3").attr("data",JSONObject.page3Content);
+
+  ///////Page 4 Content///////
+  $("#PageContent4").attr("data",JSONObject.page4Content);
 
 </script>
+
+<!--This ends the script to dynamically build some of the repeating content in each page-->
 
 </body>
 </html>
